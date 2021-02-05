@@ -1,0 +1,112 @@
+.custom-select-container,
+.custom-select-value,
+.custom-select-options,
+.custom-select-option {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.custom-select-container {
+  display: inline-block;
+  position: relative;
+  outline: none;
+}
+
+.custom-select-container:focus > .custom-select-value {
+  -webkit-box-shadow: 0 0 0 2px #000;
+          box-shadow: 0 0 0 2px #000;
+  border: 1px solid transparent;
+}
+
+.custom-select-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 230px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.custom-select-value::after {
+  content: '';
+  display: inline-block;
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.custom-select-options {
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  padding: 10px 6px;
+  border-radius: 6px;
+  opacity: 0;
+  max-height: 0;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  overflow: auto;
+  width: 100%;
+  cursor: pointer;
+  background: #252525;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.6);
+  /* Optional: show position indicator in red */
+}
+
+.custom-select-options::-webkit-scrollbar {
+  width: 6px;
+  /* Remove scrollbar space */
+  background: transparent;
+}
+
+.custom-select-options::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  border-radius: 6px;
+}
+
+.custom-select-options .custom-select-option {
+  text-align: center;
+  list-style: none;
+  padding: 10px 0;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  border-radius: 6px;
+}
+
+.custom-select-options .custom-select-option:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.custom-select-options .custom-select-option.selected {
+  background: orange;
+  margin: 3px 0;
+}
+
+.custom-select-options.show {
+  opacity: 1;
+  max-height: 26rem;
+}
+/*# sourceMappingURL=select.css.map */
